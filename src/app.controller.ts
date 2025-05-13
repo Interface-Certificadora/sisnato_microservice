@@ -7,6 +7,6 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
   @EventPattern('processar_relatorio')
   handleEvent(@Payload() data: any) {
-    this.appService.processarRelatorio(data);
+    this.appService.processarEvent(data);
   }
 }
